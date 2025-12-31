@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Data and Models
+data/noisy/*
+!data/noisy/.gitkeep
+data/clean/*
+!data/clean/.gitkeep
+processed/
+
+# Streamlit
+.streamlit/
+temp_input.wav
+restored_output.wav
+
+# OS
+.DS_Store
+Thumbs.db

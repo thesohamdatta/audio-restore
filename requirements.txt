@@ -1,0 +1,9 @@
+internetarchive
+librosa
+matplotlib
+numpy
+torch
+torchvision
+torchaudio
+streamlit
+soundfile
