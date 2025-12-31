@@ -1,6 +1,5 @@
 # Audio Restore
 
-I spent some time digging through the "Great 78 Project" on the Internet Archive and realized that while these historical recordings are cool, the surface noise is pretty brutal. I wanted to see if I could use a neural network to clean them up.
 
 This is a small project that uses a U-Net to isolate and remove historical surface noise from 78 RPM records.
 
