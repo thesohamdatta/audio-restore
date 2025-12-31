@@ -3,7 +3,7 @@
 
 This is a small project that uses a U-Net to isolate and remove historical surface noise from 78 RPM records.
 
-![App Screenshot](assets/screenshot.png)
+![Audio Restore Hero](assets/hero.png)
 
 ### The Problem
 If you listen to a record from the 1920s, there's usually a constant hiss or crackle in the background. Most standard digital filters end up stripping away the actual music along with the noise.
