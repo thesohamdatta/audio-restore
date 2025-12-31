@@ -37,6 +37,10 @@ python src/model.py
 **4. Run App**
 ```bash
 streamlit run app.py
+
+<img width="1083" height="723" alt="image" src="https://github.com/user-attachments/assets/b189a5df-bb36-4e39-b35b-b9762724c1bf" />
+
+
 ```
 
 ### Tech
