@@ -1,50 +1,46 @@
-# Audio Restore: Rescuing 100-year-old sound with AI 🎻
+# Audio Restore
 
-I spent way too much time listening to the "Great 78 Project" on the Internet Archive and realized that while historical recordings are amazing, the surface noise is... a lot. So I built this.
+I spent some time digging through the "Great 78 Project" on the Internet Archive and realized that while these historical recordings are cool, the surface noise is pretty brutal. I wanted to see if I could use a neural network to clean them up.
 
-It's an end-to-end pipeline that takes scratchy, hissing 78 RPM records and uses a U-Net (Deep Learning) to peel away the noise.
+This is a small project that uses a U-Net to isolate and remove historical surface noise from 78 RPM records.
 
 ### The Problem
-If you've ever played a record from the 1920s, you know it sounds like someone is frying bacon in the background. Digital filters help, but they often kill the soul of the music.
+If you listen to a record from the 1920s, there's usually a constant hiss or crackle in the background. Most standard digital filters end up stripping away the actual music along with the noise.
 
 ### The Fix
-I treated this as an "image-to-image" translation task. 
-1. **Audio -> Spectrogram**: Convert the sound wave into a visual heatmap of frequencies.
-2. **U-Net Magic**: Train a neural network to look at a "noisy" image and predict what the "clean" one looks like.
-3. **Spectrogram -> Audio**: Turn that cleaned-up image back into sound.
+I treated the restoration as an image-to-image translation task:
+1. **Audio to Spectrogram**: I convert the sound into a visual heatmap of frequencies.
+2. **U-Net**: A neural network trained to look at a noisy spectrogram and predict the clean version beneath it.
+3. **Reconstruction**: The "cleaned" image is turned back into a playable audio file.
 
-Does it sound like a modern 4K remaster? No. But it actually brings out the music buried under a century of dust.
+It's not a perfect studio remaster, but it does a surprisingly good job of bringing out audio that's been buried under 100 years of dust.
 
----
+### Setup
 
-### How to run it
-
-**1. Install dependencies**
+**1. Install**
 ```bash
 pip install -r requirements.txt
 ```
 
-**2. Grab some data** 
-This fetches a sample pair from the Great 78 Project.
+**2. Get Data**
+This pulls a sample pair (noisy vs restored) from the Internet Archive.
 ```bash
 python src/fetch.py
 ```
 
-**3. Train the "Brain"**
+**3. Train**
 ```bash
 python src/model.py
 ```
 
-**4. Launch the dashboard**
+**4. Run App**
 ```bash
 streamlit run app.py
 ```
 
----
+### Tech
+- **PyTorch**: Model architecture.
+- **Librosa**: Signal processing.
+- **Streamlit**: UI for the dashboard.
 
-### Tech Stack
-- **PyTorch**: For the U-Net architecture.
-- **Librosa**: For all the signal processing/spectrogram stuff.
-- **Streamlit**: For the clean (modern-retro) UI.
-
-Shoutout to the **Internet Archive** for keeping history alive. Check out the [Great 78 Project](https://great78.archive.org/) if you haven't yet.
+Data is sourced from the [Great 78 Project](https://great78.archive.org/).
