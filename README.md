@@ -38,7 +38,8 @@ python src/model.py
 ```bash
 streamlit run app.py
 
-<img width="1083" height="723" alt="image" src="https://github.com/user-attachments/assets/b189a5df-bb36-4e39-b35b-b9762724c1bf" />
+<img width="1083" height="723" alt="image" src="https://github.com/user-attachments/assets/ea235e04-e435-4369-b0c6-945afb1644dd" />
+
 
 
 ```
