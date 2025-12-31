@@ -38,11 +38,9 @@ python src/model.py
 ```bash
 streamlit run app.py
 
-<img width="1083" height="723" alt="image" src="https://github.com/user-attachments/assets/ea235e04-e435-4369-b0c6-945afb1644dd" />
-
-
 
 ```
+<img width="1083" height="723" alt="image" src="https://github.com/user-attachments/assets/677e069d-3921-40b2-b6ce-42947b2cc51b" />
 
 ### Tech
 - **PyTorch**: Model architecture.
